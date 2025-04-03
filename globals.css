@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 29% 16%;
+    --foreground: 0 0% 95%;
+    --card: 231 16% 21%;
+    --card-foreground: 0 0% 95%;
+    --popover: 231 16% 21%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 95%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 95%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-hianime-background text-hianime-primary;
+  }
+}
+
+/* Custom fonts */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://ext.same-assets.com/80099309/1411677578.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: url('https://ext.same-assets.com/80099309/3481533639.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('https://ext.same-assets.com/80099309/2465678096.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  src: url('https://ext.same-assets.com/80099309/3840256564.woff2') format('woff2');
+}
+
+/* Font Awesome */
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://ext.same-assets.com/744008742/3012714892.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Solid';
+  font-style: normal;
+  font-weight: 900;
+  src: url('https://ext.same-assets.com/744008742/3289334167.woff2') format('woff2');
+}
+
+/* Custom component styles */
+.anime-card {
+  @apply rounded-md overflow-hidden transition-transform duration-300 hover:scale-105;
+}
+
+.pink-button {
+  @apply bg-hianime-pink text-black font-medium py-2 px-4 rounded-md hover:opacity-90 transition-opacity;
+}
+
+.navbar {
+  @apply bg-hianime-navy;
+}
+
+.sidebar {
+  @apply bg-hianime-card;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Hidden scrollbar for mobile */
+@media (max-width: 768px) {
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
